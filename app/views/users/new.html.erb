@@ -1,0 +1,25 @@
+<h1>create user</h1>
+
+<%= form_for @user  do |f| %>
+<%if @user.errors.any?  %>
+<ul>
+
+<% @user.errors.full_messages.each do |msg| %>
+<li>
+<%=msg %>
+</li>
+<%end  %>
+</ul>
+<%= 
+
+  f.field_text :username, placeholder:'username'
+%>
+<%= 
+
+  f.field_text :userid, placeholder:'userid'
+%>
+<%= 
+
+  f.field_text :email, placeholder:'your email'
+%>
+<% end %>
