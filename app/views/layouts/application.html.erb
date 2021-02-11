@@ -11,6 +11,20 @@
   </head>
 
   <body>
+    <nav>
+      <div>
+        <h2><%= link_to 'Private Events', root_path  %></h2>
+      </div>
+      <div>
+        <ul>
+            <%= render '/layouts/user_status' %>            
+        </ul>
+      </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>
+
+
+
