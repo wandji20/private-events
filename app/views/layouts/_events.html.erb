@@ -1,0 +1,11 @@
+<div class="container">
+<div class="row">
+
+<% @events.each do |e| %>
+<p class="bold"> title: <%=e.title%></p>
+<p>date:<%=e.date%></p>
+<p>description: <%=e.description%></p>
+<%= link_to "know more about #{e.title}", e, class:'btn btn-primary w-25' %>
+<% end %>
+</div>
+</div>

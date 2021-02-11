@@ -1,3 +1,10 @@
 <h1> User page</h1>
 
-<h1><%= @user.name %></h1>
+<h1><%= @user.username %> events</h1>
+
+
+<%@user.events.each do |event| %>
+<p><%=event.title%></p>
+<p><%=event.date%></p>
+<p><%=event.description%></p>
+<% end %>
