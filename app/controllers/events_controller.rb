@@ -1,8 +1,12 @@
+require 'date'
+
 class EventsController < ApplicationController
   def index
     @events = Event.all
-    @upcoming_events = Event.upcoming_events.all
+    @upcoming_events = Event.upcoming_events
     @previous_events = Event.previous_events.all
+      
+
   end
 
   def new
@@ -28,5 +32,5 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:date, :title, :description)
   end
-  binding pry
+  #binding pry
 end

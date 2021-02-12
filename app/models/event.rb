@@ -5,7 +5,8 @@ class Event < ApplicationRecord
   has_many :attendances, foreign_key: 'attended_event_id'
   has_many :attendees, class_name: 'User', through: 'attendances'
 
-  scope :upcoming_events, -> { where('date > ?', Date.today.to_s) }
-  scope :previous_events, -> { where('date < ?', Date.today.to_s) }
-  # scope :important, -> { where(is_important: true) }
+  scope :upcoming_events, -> { where('date > ?', Date.today) }
+  scope :previous_events, -> { where('date < ?', Date.today) }
+  validates :title, :date, presence: true
+  validates :description,  length: {in: (7...101)}
 end
