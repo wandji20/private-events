@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
-  def new
-    
-  end
+  def new; end
 
   def create
     user = User.find_by_userid(params[:userid]) || User.find_by_username(params[:username])
@@ -17,5 +15,4 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_path flash[:success] = 'You have succesfully logged out'
   end
-
 end

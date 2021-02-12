@@ -8,5 +8,5 @@ class Event < ApplicationRecord
   scope :upcoming_events, -> { where('date > ?', Date.today) }
   scope :previous_events, -> { where('date < ?', Date.today) }
   validates :title, presence: true
-  validates :description,length: { in: (7...101) }
+  validates :description, length: { in: (7...101) }
 end
