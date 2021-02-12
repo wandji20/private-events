@@ -14,12 +14,14 @@
  *= require_self
  */
 
- @import 'bootstrap';
+@import 'bootstrap';
+
 ul,
 nav {
   display: flex;
   justify-content: space-around;
 }
+
 li {
   list-style: none;
   margin-right: 10px;
