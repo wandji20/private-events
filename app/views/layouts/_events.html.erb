@@ -1,11 +1,24 @@
 <div class="container">
-<div class="row">
-
-<% @events.each do |e| %>
-<p class="bold"> title: <%=e.title%></p>
-<p>date:<%=e.date%></p>
-<p>description: <%=e.description%></p>
-<%= link_to "know more about #{e.title}", e, class:'btn btn-primary w-25' %>
-<% end %>
-</div>
+  <div class="row justify-content-center">
+  
+  <% if @upcoming_events.size >= 1 %>
+    <h2 class="h2">Upcoming events</h1>
+    <% @upcoming_events.each do |e| %>
+      <p class="bold"> title: <%=e.title%></p>
+      <p>date:<%=e.date%></p>
+      <p>description: <%=e.description%></p>
+      <%= link_to "know more about #{e.title}", e, class:'btn btn-primary w-25' %>
+    <% end %>
+  </div>
+  <% else %>
+      <div class="row justify-content-center">
+    <h2 class="h2">Previous events</h1>
+    <% @previous_events.each do |e| %>
+      <p class="bold"> title: <%=e.title%></p>
+      <p>date:<%=e.date%></p>
+      <p>description: <%=e.description%></p>
+      <%= link_to "know more about #{e.title}", e, class:'btn btn-primary w-25' %>
+    <% end %>
+  </div>
+  <% end %>
 </div>
