@@ -2,7 +2,7 @@
 
 # Private Events
 
-This project is based on building an a platform similar to Eventbrite which allows users to sign up or log in, and create events. While not signed in, users can see all upcoming and past events but user will be required to sign in to create a new event.
+This project is based on building a platform similar to Eventbrite which allows users to sign up or log in, and create events. While not signed in, users can see all upcoming and past events but users will be required to sign in to create a new event.
 
 **User logged in view**
 
