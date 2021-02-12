@@ -10,6 +10,8 @@ class EventsController < ApplicationController
   def create
     @event = current_user.events.build(event_params)
     if @event.save
+      @event.attendees << current_user
+      #current_user.attendance.build()
       redirect_to current_user
     else
       render 'new'
@@ -18,6 +20,7 @@ class EventsController < ApplicationController
 
   def show
     @user = current_user
+    @event = Event.find(params[:id])
   end
 
   private

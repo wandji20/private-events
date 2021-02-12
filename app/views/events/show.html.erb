@@ -1,7 +1,18 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-7">
-    <%= @user.username %>
+      <%= @user.username %>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <h3>Attendee List</h3>
+      <ul>
+        <% @event.attendees.each do |attendee| %>
+          <li><%= attendee.username %></li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
