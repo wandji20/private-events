@@ -11,7 +11,8 @@
         <h5 class="card-title"><%= event.title %></h5>
         <p class="card-text"><%= event.date %></p>
         <p class="card-text"><%= event.description %></p>
-      
+        <span><%= link_to 'More Details', event %></span>
+              <span><%= link_to 'Attend Event', attendances_path(:attended_event_id => event), method: :post %></span>
       </div>
       </div>
       <% end %>
@@ -29,7 +30,8 @@
       <h5 class="card-title"><%= event.title %></h5>
       <p class="card-text"><%= event.date %></p>
       <p class="card-text"><%= event.description %></p>
-      
+      <span><%= link_to 'More Details', event %></span>
+              <span><%= link_to 'Attend Event', attendances_path(:attended_event_id => event), method: :post %></span>
       </div>
       </div>
       <% end %>
@@ -48,7 +50,8 @@
       <h5 class="card-title"><%= event.title %></h5>
       <p class="card-text"><%= event.date %></p>
       <p class="card-text"><%= event.description %></p>
-      
+      <span><%= link_to 'More Details', event %></span>
+              <span><%= link_to 'Attend Event', attendances_path(:attended_event_id => event), method: :post %></span>
       </div>
       </div>
       <% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :attendances
   resources :sessions
   resources :users
   resources :events

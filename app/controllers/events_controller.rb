@@ -4,12 +4,10 @@ class EventsController < ApplicationController
   def index
     @upcoming_events = Event.upcoming_events
     @previous_events = Event.previous_events
-   
   end
 
   def new
     @event = current_user.events.build
-  
   end
 
   def create
