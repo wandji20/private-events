@@ -1,0 +1,45 @@
+<div class="container">
+    
+    <div class="row justify-content-center w-100">
+
+    
+        <h2 class="h2 text-center">Upcoming Events</h1>
+
+      <% @upcoming_events.each do |event| %>
+        <div class="card mb-3 col-md-4 mr-5">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.title %></h5>
+            <p class="card-text"><%= event.date %></p>
+            <p class="card-text"><%= event.description %></p>
+            <p class="card-text">
+              <span><%= link_to 'More Details', event %></span>
+              <span><%= link_to 'Attend Event', attendances_path(:attended_event_id => event), method: :post %></span>
+            </p>
+          </div>
+        </div>
+      <% end %>
+
+      
+  </div>
+
+    <div class="row justify-content-center w-100">
+
+      <h2 class="h2 text-center">Previous Attended Events</h1>
+
+
+      <% @previous_events.each do |event| %>
+        <div class="card mb-3 col-md-4 mr-5">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.title %></h5>
+            <p class="card-text"><%= event.date %></p>
+            <p class="card-text"><%= event.description %></p>
+            <span><%= link_to 'More Details', event %></span>
+            <span><%= link_to 'Attend Event', attendances_path(:attended_event_id => event), method: :post %></span>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  
+</div>
+  

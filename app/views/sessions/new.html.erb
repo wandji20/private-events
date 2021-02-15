@@ -1,0 +1,10 @@
+<h1>Log In </h1>
+
+<%= form_tag sessions_path  do  %>
+
+  <%= label_tag :username, 'User Name' %> <br>
+  <%= text_field_tag :username, nil %> <br>
+
+  <%= submit_tag 'Sign in' %>
+<% end %>
+

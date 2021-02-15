@@ -1,0 +1,16 @@
+<h1>create user</h1>
+
+<%= form_for @user  do |f| %>
+      <ul>
+      <%if @user.errors.any?  %>
+            <% @user.errors.full_messages.each do |msg| %>
+            <li>
+            <%=msg %>
+            </li>
+          <%end %>
+      <% end %>
+      </ul>
+      <%= f.text_field :username, placeholder:'username'%>
+      <%= f.text_field :email, placeholder:'your email'%>
+      <%= f.submit 'sign Up' %>
+<% end %>

@@ -1,0 +1,13 @@
+<%= form_for @event do |f| %>
+  <%= f.label :title, 'Event title' %> <br>
+  <%= f.text_field :title, placeholder:'add an event date' %> <br>
+  <%= f.label :date, 'Date' %> <br>
+  <%= f.date_field :date, placeholder:'add an event date' %><br>
+  <%= f.label :description, 'Description' %> <br>
+  <%= f.text_field :description, size: "70x10" %><br>
+  
+
+
+  <%= f.submit 'create event'%><br>
+
+<% end %>
