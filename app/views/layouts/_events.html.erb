@@ -1,24 +1,41 @@
 <div class="container">
-  <div class="row justify-content-center">
+    
+    <div class="row justify-content-center w-100">
+
+    
+        <h2 class="h2 text-center">Upcoming Events</h1>
+
+      <% @upcoming_events.each do |event| %>
+        <div class="card mb-3 col-md-4 mr-5">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.title %></h5>
+            <p class="card-text"><%= event.date %></p>
+            <p class="card-text"><%= event.description %></p>
+          
+          </div>
+        </div>
+      <% end %>
+
+      
+  </div>
+
+    <div class="row justify-content-center w-100">
+
+      <h2 class="h2 text-center">Previous Attended Events</h1>
+
+
+      <% @previous_events.each do |event| %>
+        <div class="card mb-3 col-md-4 mr-5">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.title %></h5>
+            <p class="card-text"><%= event.date %></p>
+            <p class="card-text"><%= event.description %></p>
+          
+          </div>
+        </div>
+      <% end %>
+
+    </div>
   
-
-    <h2 class="h2">Upcoming events</h1>
-    <% @upcoming_events.each do |event| %>
-      <p class="bold"> title: <%=event.title%></p>
-      <p>date:<%=event.date%></p>
-      <p>description: <%=event.description%></p>
-      <%= link_to "know more about #{event.title}", event, class:'btn btn-primary w-25' %>
-    <% end %>
-  </div>
- 
-  <div class="row justify-content-center">
-    <h2 class="h2">Previous events</h1>
-    <% @previous_events.each do |event| %>
-      <p class="bold"> title: <%=event.title%></p>
-      <p>date:<%=event.date%></p>
-      <p>description: <%=event.description%></p>
-      <%= link_to "know more about #{event.title}", event, class:'btn btn-primary w-25' %>
-    <% end %>
-  </div>
-
 </div>
+  

@@ -2,9 +2,8 @@ class EventsController < ApplicationController
   before_action :set_event, only: %i[create new show]
   # before_action :authenticate_user, only: %i[create new show]
   def index
-    @events = Event.all
     @upcoming_events = Event.upcoming_events
-    @previous_events = Event.previous_events.all
+    @previous_events = Event.previous_events
   end
 
   def new
