@@ -20,6 +20,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @created_events = current_user.events
     @user = current_user
   end
 

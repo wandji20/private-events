@@ -1,12 +1,59 @@
+<div class="container">
+ 
+    <div class="row justify-content-space-between w-100">
 
-<h1> User page</h1>
-
-<h1><%= @user.username %> events</h1>
+          <h2 class="h2"><%= @user.username %> created events</h1>
 
 
-<%@user.events.each do |event| %>
-<p><%=event.title%></p>
-<p><%=event.date%></p>
-<p><%=event.description%></p>
-<% end %>
+      <%@created_events.each do |event| %>
+      <div class="card mb-3 col-md-4 mr-5">
+      <div class="card-body">
+      <h5 class="card-title"><%= event.title %></h5>
+      <p class="card-text"><%= event.date %></p>
+      <p class="card-text"><%= event.description %></p>
+      
+      </div>
+      </div>
+      <% end %>
+
+      
+  </div>
+
+    <div class="row justify-content-space-between w-100">
+
+          <h2 class="h2">your previous attended events</h1>
+
+
+      <%@created_events.each do |event| %>
+      <div class="card mb-3 col-md-4 mr-5">
+      <div class="card-body">
+      <h5 class="card-title"><%= event.title %></h5>
+      <p class="card-text"><%= event.date %></p>
+      <p class="card-text"><%= event.description %></p>
+      
+      </div>
+      </div>
+      <% end %>
+
+
+  </div>
+    <div class="row justify-content-space-between w-100">
+
+          <h2 class="h2"> your upcoming attended events</h1>
+
+
+      <%@created_events.each do |event| %>
+      <div class="card mb-3 col-md-4 mr-5">
+      <div class="card-body">
+      <h5 class="card-title"><%= event.title %></h5>
+      <p class="card-text"><%= event.date %></p>
+      <p class="card-text"><%= event.description %></p>
+      
+      </div>
+      </div>
+      <% end %>
+
+
+  </div>
+</div>
   
