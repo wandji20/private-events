@@ -9,7 +9,7 @@
     <div class="col-md-7">
       <h3>Attendee List</h3>
       <ul>
-        <% @event.attendees.each do |attendee| %>
+        <% @attendees.each do |attendee| %>
           <li><%= attendee.username %></li>
         <% end %>
       </ul>
